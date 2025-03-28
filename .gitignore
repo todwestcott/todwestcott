@@ -10,3 +10,5 @@ Thumbs.db
 *.bak
 *.tmp
 *.log
+node_modules/
+.hugo_build.lock

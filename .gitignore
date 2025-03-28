@@ -1,0 +1,12 @@
+.idea/
+*.iml
+/resources/
+/public/
+Thumbs.db
+.DS_Store
+.vscode
+*.swp
+*.swo
+*.bak
+*.tmp
+*.log

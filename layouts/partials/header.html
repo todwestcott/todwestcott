@@ -1,0 +1,9 @@
+<nav>
+    <ul class="navbar">
+        {{ range $index, $element := .Site.Menus.main }}
+            <li>
+                <a  class="{{ if eq $index 0 }}first{{ end }}" href="{{ $element.URL }}">{{ $element.Name }}</a>
+            </li>
+        {{ end }}
+    </ul>
+</nav>

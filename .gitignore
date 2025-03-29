@@ -1,0 +1,10 @@
+/public/
+/resources/
+/resources/_gen/
+/.idea/
+.hugo_build.lock
+.DS_Store
+tmp/
+dist/
+hugo.exe
+hugo.linux

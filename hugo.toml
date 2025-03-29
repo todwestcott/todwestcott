@@ -18,6 +18,11 @@ name = "About Me"
 url = "/about-me/"
 weight = 3
 
+[[menu.main]]
+name = "Contact"
+url = "/contact/"
+weight = 3
+
 [params]
 images = [
     { url = "post-5.jpg", alt = "post-5 images", description = "The Posion of the New Age", link = "/post-5"},

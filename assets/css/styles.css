@@ -15,9 +15,6 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: Poppins, sans-serif;
 }
-.container {
-    width: 100vw;
-}
 .navbar {
     display: flex;
     list-style: none;
@@ -45,11 +42,19 @@ h1, h2, h3, h4, h5, h6 {
 .navbar > li > a.first:hover {
     color: blue;
 }
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .image-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
 }
+/* Base styles for mobile first approach */
 .image-box {
     background-size: cover;
     background-position: center;
@@ -58,8 +63,10 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     align-items: center;
     position: relative;
+    width: min(90vw, 425px);     /* 90% of viewport width but max 500px */
+    height: min(105vw, 495px);    /* Maintain similar aspect ratio */
+    overflow: hidden;
 }
-
 .overlay-text {
     color: white;
     font-size: 24px;

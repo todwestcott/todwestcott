@@ -7,7 +7,7 @@
     <div class="image-container">
         {{ range $key, $value := .Site.Params.images }}
             <div class="image-box" style="background-image: url('/images/{{ $value.url }}');
-                    width: 450px; height: 525px;">
+                    ">
                 <div class="text-overlay-container">
                 <span class="overlay-text">{{ $value.description }}</span>
                 <a href="{{ $value.link }}" class="read-more-button">

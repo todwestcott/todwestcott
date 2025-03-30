@@ -63,8 +63,8 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     align-items: center;
     position: relative;
-    width: min(90vw, 425px);     /* 90% of viewport width but max 500px */
-    height: min(105vw, 495px);    /* Maintain similar aspect ratio */
+    width: min(80vw, 425px);     /* 90% of viewport width but max 500px */
+    height: min(93vw, 495px);    /* Maintain similar aspect ratio */
     overflow: hidden;
 }
 .overlay-text {

@@ -25,9 +25,9 @@ weight = 3
 
 [params]
 images = [
-    { url = "post-5.jpg", alt = "post-5 images", description = "The Posion of the New Age", link = "/post-5"},
-    { url = "post-1.jpg", alt = "post-1 images", description = "Does God Send Anyone to Hell?", link = "/post-1"},
-    { url = "post-2.jpg", alt = "post-2 images", description = "Is Perfection Required for Heaven?", link = "/post-2"},
-    { url = "post-3.jpg", alt = "post-e images", description = "What is Missing in the Western Gospel", link = "/post-3"},
-    { url = "post-4.jpg", alt = "post-4 images", description = "The True Gospel Given By Paul", link = "/post-4"}
+    { url = "post-5.wbp", alt = "post-5 images", description = "The Posion of the New Age", link = "/post-5"},
+    { url = "post-1.wbp", alt = "post-1 images", description = "Does God Send Anyone to Hell?", link = "/post-1"},
+    { url = "post-2.wbp", alt = "post-2 images", description = "Is Perfection Required for Heaven?", link = "/post-2"},
+    { url = "post-3.wbp", alt = "post-e images", description = "What is Missing in the Western Gospel", link = "/post-3"},
+    { url = "post-4.wbp", alt = "post-4 images", description = "The True Gospel Given By Paul", link = "/post-4"}
 ]

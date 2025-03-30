@@ -1,52 +1,140 @@
 html {
     box-sizing: border-box;
 }
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
+
 body {
     font-family: EB Garamond, serif;
     font-size: 1rem;
     line-height: 1.5;
     background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
 }
+
 h1, h2, h3, h4, h5, h6 {
     font-family: Poppins, sans-serif;
 }
-.navbar {
-    display: flex;
-    list-style: none;
-    gap: 1rem;
-    justify-content: center;
-}
-.navbar >li > a {
-    text-decoration: none;
-    display: block;
-    padding: .5rem;
-    text-transform: uppercase;
+/* Container styling */
+.nav-container {
+    position: relative;
+    padding: 1rem;
+    background: #333; /* Change color as needed */
+    z-index: 1000;
+    margin-bottom: 1rem;
     font-family: Poppins, sans-serif;
-    font-weight: 400;
-    color: black;
-    font-size: 1.25rem;
 }
-.navbar >li > a:hover {
-    background-color: crimson;
+
+/* Hide checkbox */
+.nav-toggle {
+    display: none;
+}
+/* Hamburger icon */
+.nav-toggle-label {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2;
+}
+.nav-toggle-label span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    margin-bottom: 3px;
+    transition: transform 0.3s ease-in-out;
+}
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    z-index: 1000; /* Add this */
+
+}
+.nav-menu {
+    /* ... existing styles ... */
+    transition: all 0.3s ease-in-out;
+}
+.nav-menu a {
     color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
 }
-.navbar > li > a.first {
-    background-color: whitesmoke;
-    color: red;
+.nav-menu li {
+    padding: 0;
+    margin: 0;
 }
-.navbar > li > a.first:hover {
-    color: blue;
+.nav-menu a {
+    padding: 0;  /* Reduce these values as needed */
+    margin: 0;          /* Remove any margins */
+    display: block;     /* Keep this for full clickable area */
+}
+.nav-menu a:hover {
+    color: #ffd700; /* Or any color you prefer */
+}
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+    .nav-toggle-label {
+        display: block;
+    }
+    .nav-toggle:checked ~ .nav-menu {
+        /* ... existing styles ... */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        display: flex;
+        position: absolute;
+        width: 100%;
+    }
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #333;
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+    }
+    .nav-menu {
+        /* ... existing styles ... */
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+    .nav-toggle:checked ~ .nav-menu {
+        transform: translateY(0);
+        opacity: .85;
+    }
+    /* Show menu when checkbox is checked */
+    .nav-toggle:checked ~ .nav-menu {
+        display: flex;
+    }
+    /* Animate hamburger to X when opened */
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
+        opacity: 0;
+    }
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
 }
 .container {
     width: 100%;
     display: flex;
     justify-content: center;
 }
+
 .image-container {
     display: flex;
     flex-wrap: wrap;
@@ -63,23 +151,21 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     align-items: center;
     position: relative;
-    width: min(80vw, 425px);     /* 90% of viewport width but max 500px */
-    height: min(93vw, 495px);    /* Maintain similar aspect ratio */
+    width: min(80vw, 425px); /* 90% of viewport width but max 500px */
+    height: min(93vw, 495px); /* Maintain similar aspect ratio */
     overflow: hidden;
 }
 .overlay-text {
     color: white;
     font-size: 24px;
     font-family: Poppins, sans-serif;
-    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     margin-bottom: 10px; /* Add some space between text and button */
     text-align: center;
 }
-
 .read-more-button {
     width: fit-content; /* Ensure the button is centered */
 }
-
 .read-more-button button {
     background-color: transparent;
     color: white;

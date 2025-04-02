@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Container styling */
 .nav-container {
     position: relative;
-    padding: 1rem;
+    padding: 30px 20px;
     background: #333; /* Change color as needed */
     z-index: 1000;
     margin-bottom: 1rem;
@@ -53,7 +53,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .nav-menu {
     display: flex;
-    gap: 2rem;
+    justify-content: center;
+    gap: 3rem;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -138,7 +139,6 @@ h1, h2, h3, h4, h5, h6 {
 .image-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 20px;
     padding: 0 20px;
 }
@@ -151,8 +151,8 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     align-items: center;
     position: relative;
-    width: min(80vw, 425px); /* 90% of viewport width but max 500px */
-    height: min(93vw, 495px); /* Maintain similar aspect ratio */
+    width: min(90vw, 425px); /* 90% of viewport width but max 500px */
+    height: min(105vw, 495px); /* Maintain similar aspect ratio */
     overflow: hidden;
 }
 .overlay-text {

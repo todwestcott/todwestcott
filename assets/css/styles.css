@@ -135,7 +135,6 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
 }
-
 .image-container {
     display: flex;
     flex-wrap: wrap;
@@ -163,6 +162,16 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 10px; /* Add some space between text and button */
     text-align: center;
 }
+.overlay-text.poem  {
+    list-style-type: none;
+    font-size: 1.25rem;
+    font-style: italic;
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    line-height: 1.25;
+    font-family: EB Garamond, serif;
+}
 .read-more-button {
     width: fit-content; /* Ensure the button is centered */
 }
@@ -183,4 +192,18 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+/* BLOG POSTS CSS */
+.post-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.post-container h1 {
+    text-align: center;
+}
+.post-container p {
+    text-align: justify;
+}
+.post-container img {
+    max-width: 100%;
 }

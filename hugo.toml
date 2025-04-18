@@ -25,9 +25,8 @@ weight = 3
 
 [params]
 images = [
-    { url = "dark-figure-against-milky-way.jpg", alt = "post-5 images", description = "The Poison of the New Age", link = "/post-5"},
-    { url = "post-1.webp", alt = "post-1 images", description = "Does God Send Anyone to Hell?", link = "/post-1"},
-    { url = "post-2.webp", alt = "post-2 images", description = "Is Perfection Required for Heaven?", link = "/post-2"},
-    { url = "empty_hole.jpg", alt = "post-e images", description = "What is Missing in the Western Gospel?", link = "/post-3"},
-    { url = "man-milky-backdrop.jpg", alt = "post-4 images", description = "Are We All Sons of God?", link = "/post-4"}
+    { url = "images/scaled-6x7/post-1.jpg", alt = "post-5 images", description = "The Coming Harvest", link = "/post-5"},
+    { url = "images/scaled-6x7/post-2.jpg", alt = "post-1 images", description = "Does God Send Anyone to Hell?", link = "/post-3"},
+    { url = "images/scaled-6x7/post-3.jpg", alt = "post-2 images", description = "Is Perfection Required for Heaven?", link = "/post-2"},
+    { url = "images/scaled-6x7/post-4.jpg", alt = "post-e images", description = "What is Missing in the Western Gospel?", link = "/post-1"}
 ]

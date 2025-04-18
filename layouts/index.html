@@ -3,20 +3,31 @@
 {{ partial "head.html" . }}
 <body>
 {{ partial "header.html" . }}
-<div class="container">
-    <div class="image-container">
-        {{ range $key, $value := .Site.Params.images }}
-            <div class="image-box" style="background-image: url('/images/{{ $value.url }}');
-                    ">
+<div class="image-container">
+    {{ range .Site.RegularPages }}
+        {{ $page := . }}
+        {{ with resources.Get .Params.imageHome }}
+            {{ $processed := .Resize "400x webp 83q" }}
+            <div class="image-box" style="background-image: url('{{ $processed.RelPermalink }}');">
                 <div class="text-overlay-container">
-                <span class="overlay-text">{{ $value.description }}</span>
-                <a href="{{ $value.link }}" class="read-more-button">
-                    <button>Read More</button>
-                </a>
-                </div>
+                    {{ with $page.Params.poem }}
+                        <span class="overlay-text">{{ $page.Params.poemTitle }}</span>
+                        <span class="overlay-text poem">{{ range . }}
+                            {{ . }}
+                            <br>{{ end }}
+                        </span>
+                    {{ end }}
+                    {{ if $page.Params.title }}
+                        <span class="overlay-text">{{ $page.Params.title }}</span>
+                        <a href="{{ $page.Params.link }}" class="read-more-button">
+                            <button>Read More</button>
+                        </a>
+                    {{ end }}
+
+            </div>
             </div>
         {{ end }}
-    </div>
+    {{ end }}
 </div>
 </body>
 </html>

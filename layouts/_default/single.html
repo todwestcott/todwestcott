@@ -1,0 +1,10 @@
+{{ define "main" }}
+    <div class="post-container">
+{{ with resources.Get .Params.imagePost}}
+    {{ $optimized := .Resize "800x webp q75" }}
+    <img src="{{ $optimized.RelPermalink }}" alt="">
+{{ end }}
+        <h1>{{.Title}}</h1>
+        {{ .Content }}
+    </div>
+{{ end }}
